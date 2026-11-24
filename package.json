@@ -1,0 +1,14 @@
+{
+  "name": "tma-shop",
+  "version": "1.0.0",
+  "description": "Ordering mini app for Telegram with a zero-dependency bot backend",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node bot/bot.mjs",
+    "serve": "python -m http.server 8080 --directory webapp",
+    "test": "node --test"
+  }
+}

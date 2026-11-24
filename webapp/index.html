@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="color-scheme" content="light dark">
+  <title>Brew Bar — Telegram Mini App demo</title>
+  <meta name="description" content="Ordering mini app for Telegram: catalog, options, cart and checkout. Zero dependencies.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="top">
+      <div class="top__row">
+        <div>
+          <p class="top__hint" id="greeting">Good morning</p>
+          <h1 class="top__title">Brew Bar</h1>
+        </div>
+        <button class="pill" id="pickup" type="button" aria-label="Change pickup point">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11A6.5 6.5 0 0 1 12 3.5 6.5 6.5 0 0 1 18.5 10c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <span id="pickupLabel">Old Town</span>
+        </button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <input id="search" type="search" placeholder="Search the menu" autocomplete="off" enterkeyhint="search">
+      </label>
+      <nav class="tabs" id="tabs" aria-label="Menu categories"></nav>
+    </header>
+
+    <main class="grid" id="grid" aria-live="polite"></main>
+    <p class="empty" id="empty" hidden>Nothing matches that search.</p>
+
+    <button class="cartbar" id="cartbar" type="button" hidden>
+      <span class="cartbar__count" id="cartCount">0</span>
+      <span class="cartbar__label">View order</span>
+      <span class="cartbar__total" id="cartTotal">$0.00</span>
+    </button>
+  </div>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden></section>
+
+  <section class="page" id="checkout" aria-labelledby="checkoutTitle" hidden></section>
+
+  <section class="page page--center" id="done" hidden></section>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
