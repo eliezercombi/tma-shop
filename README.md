@@ -4,6 +4,8 @@ A complete order-ahead flow that runs inside a Telegram chat: catalogue, product
 
 **[Open the live demo](https://eliezercombi.github.io/brew-bar/)** (it also runs in a normal browser tab)
 
+<p><img src="docs/demo.gif" alt="Ordering flow: pick a drink, choose options, check out" width="280"></p>
+
 ![Catalogue, product sheet and checkout](docs/screens.png)
 
 ## What is in here
